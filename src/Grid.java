@@ -23,8 +23,10 @@ public class Grid extends Util {
   public static void runBruteForce() {
     ProgGen2D.run();
     Grid g = new Grid();
-    for (int i = 0; i < 1000; i++) {
-      for (int j = 0; j <= i; j++) {
+    for (int a = 0; a < 1000; a++) {
+      for (int b = 0; b <= a / 2; b++) {
+        int i = a - b;
+        int j = b;
         Node init = new Node();
         init.xprog = ProgGen2D.condensed.get(i);
         init.yprog = ProgGen2D.condensed.get(j);
